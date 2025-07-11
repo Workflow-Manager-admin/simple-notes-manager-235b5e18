@@ -1,5 +1,5 @@
 <resources>
-    <style name="AppTheme" parent="Theme.Material3">
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- The XML just defines a base theme. Compose will use code-based theme overrides. -->
     </style>
 </resources>

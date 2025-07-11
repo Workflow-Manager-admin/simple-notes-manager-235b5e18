@@ -28,7 +28,11 @@ class NotesRepository {
     suspend fun listNotes(): List<Note> = withContext(Dispatchers.IO) {
         try {
             val results = supabase.postgrest[NOTES_TABLE]
-                .select().order("id", ascending = false).decodeList<Note>()
+                .select(
+                    columns = "*",
+                    parameters = mapOf("order" to "id.desc")
+                )
+                .decodeList<Note>()
             results
         } catch (e: Exception) {
             emptyList()

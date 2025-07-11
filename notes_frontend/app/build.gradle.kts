@@ -45,6 +45,8 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.2.1")
     implementation("androidx.compose.ui:ui:1.6.5")
     implementation("androidx.compose.foundation:foundation:1.6.5")
+    // Needed for Compose Material icons (Icons.Default.xyz)
+    implementation("androidx.compose.material:material-icons-extended:1.6.5")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
@@ -57,4 +59,7 @@ dependencies {
     // Supabase client for Kotlin (community) - only use available versions, no BOM
     implementation("io.github.jan-tennert.supabase:postgrest-kt:2.2.0")
     implementation("io.github.jan-tennert.supabase:gotrue-kt:2.2.0")
+
+    // Ensure the Material Components library is present for Theme.Material3 resource linking
+    implementation("com.google.android.material:material:1.11.0")
 }
